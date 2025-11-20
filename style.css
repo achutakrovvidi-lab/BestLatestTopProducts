@@ -1,0 +1,124 @@
+:root {
+    --primary-blue: #3498db;
+    --dark-blue: #2980b9;
+    --text-color: #333;
+    --light-bg: #f5f8fa; /* Subtle light blue tint background */
+}
+
+/* Base Style Update */
+body { 
+    font-family: 'Inter', Arial, sans-serif; /* Modern font choice */
+    background: var(--light-bg); 
+    margin: 0; 
+    padding: 20px;
+    color: var(--text-color);
+}
+
+/* Header Style Update */
+.header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background: #fff; 
+    padding: 18px 25px; /* Increased padding */
+    border-radius: 16px; /* Increased rounding */
+    margin-bottom: 30px; /* Increased margin */
+    /* Awesome Shadow: Subtle lift effect */
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.1); 
+    border-bottom: 3px solid var(--primary-blue); /* Blue accent line */
+    transition: transform 0.3s ease;
+}
+
+.header:hover {
+    transform: translateY(-2px);
+}
+
+/* Grid remains responsive, no color change needed */
+.grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjusted minimum width for better card display */
+    gap: 30px; /* Increased gap */
+}
+
+/* Card Style Update */
+.card {
+    background: #fff; 
+    padding: 20px; /* Increased padding */
+    border-radius: 16px; /* Increased rounding */
+    /* Awesome Shadow: Clear, defined shadow */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 15px 45px rgba(52, 152, 219, 0.2); /* Subtle blue glow on hover */
+}
+
+/* Card Image Update */
+.card img {
+    width: 100%; 
+    height: 180px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 15px; /* Added spacing */
+}
+
+/* Categories Style Update */
+.categories {
+    display: flex; 
+    flex-wrap: wrap; /* Allows wrap on mobile */
+    gap: 15px; /* Increased gap */
+    margin-bottom: 30px; /* Increased margin */
+    justify-content: center; /* Center categories */
+}
+
+/* Category Item Update */
+.cat {
+    background: #fff; 
+    padding: 10px 20px; /* Adjusted padding */
+    border-radius: 25px; /* Pill shape */
+    cursor: pointer; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Lighter shadow */
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+    border: 1px solid #ddd;
+}
+
+.cat:hover, .cat.active { /* .active is for the currently selected category */
+    background: var(--primary-blue);
+    color: white;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Footer Style Update */
+.footer {
+    text-align: center; 
+    margin-top: 50px; 
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    color: var(--text-color); /* Darker, more legible color */
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+/* Placeholder for custom link/button style to use light blue */
+.button-primary {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
+    transition: background-color 0.2s;
+}
+
+.button-primary:hover {
+    background-color: var(--dark-blue);
